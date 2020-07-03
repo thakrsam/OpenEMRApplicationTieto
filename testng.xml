@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OpenEMR Suite">
+  <parameter name="browser" value="ff"></parameter>
+  
+  <test thread-count="5" name="Login Test">
+  <parameter name="browser" value="ch"></parameter>
+    <classes>
+      <class name="com.tieto.openemrtest.LoginTest">
+	 <methods> 
+		      <include name="validCredentialTest"></include>
+		      <exclude name="invalidCredentialTest"></exclude>
+	  </methods> 
+      </class>
+    </classes>
+  </test> <!-- Login Test -->
+  
+   
+  <test thread-count="5" name="Add Test">
+  <parameter name="browser" value="ff"></parameter>
+    <classes>
+      <class name="com.tieto.openemrtest.AddPatientTest"/>
+    </classes>
+  </test> <!-- Login Test -->
+  
+</suite> <!-- OpenEMR Suite -->
+
+
